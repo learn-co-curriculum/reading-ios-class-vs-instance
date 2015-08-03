@@ -83,6 +83,9 @@ While the class object is said to "manufacture" its instance objects, the common
 
 In this metaphor, it's easy to see the class object as distinct from the instances that it creates—but yet, there's an inseparable relationship between the two: the shape of the template and of the mold are based upon the needs of how the print or the product will be used, and any changes made to the template or to the mold will be reflected on the printed page or in the product's shape.
 
-It's also easy to imagine how classes aren't used to hold data, but rather to give structure to how the data should be held by an instance: it would be silly, for example, to try writing on a template while expecting that information to transfer to the prints.
+It's also easy to imagine how classes aren't used to hold data, but rather to give structure to how the data should be held by an instance: it would be silly, for example, to try painting the inside of the mold while expecting your artwork to transfer to every one of the casted toys. No, each casted toy must be awarded its own coat of paint.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Toy_Soldiers_British_Coldstream_Guards.jpg/1024px-Toy_Soldiers_British_Coldstream_Guards.jpg)
+—*54mm Toy Soldiers representing the British Coldstream Guards during the Crimean War era* by Imperial Productions, Greytown, New Zealand. Photo by J. Corey Butler, 2005. [Wikipedia Commons](https://commons.wikimedia.org/wiki/File:Toy_Soldiers_British_Coldstream_Guards.jpg)
 
 In the same way, setting up a class file is like creating a template or a mold in code. It's not until an instance object of that class is created (or "manufactured") that we have the print or the product to apply to its intended purpose.
