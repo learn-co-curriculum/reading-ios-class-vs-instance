@@ -1,4 +1,4 @@
-# Class Versus Instance
+# Class vs Instance
 
 ## Objectives
 
@@ -89,3 +89,4 @@ It's also easy to imagine how classes aren't used to hold data, but rather to gi
 —*54mm Toy Soldiers representing the British Coldstream Guards during the Crimean War era* by Imperial Productions, Greytown, New Zealand. Photo by J. Corey Butler, 2005. [Wikipedia Commons](https://commons.wikimedia.org/wiki/File:Toy_Soldiers_British_Coldstream_Guards.jpg)
 
 In the same way, setting up a class file is like creating a template or a mold in code. It's not until an instance object of that class is created (or "manufactured") that we have the print or the product to apply to its intended purpose.
+
