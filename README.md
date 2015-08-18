@@ -4,8 +4,11 @@
 
 1. Read about the influence of Simula and Smalltalk upon object-oriented programming.
 2. Distinguish class methods from instance methods.
-3. Distinguish class objects from instance objects with the "factory" metaphor.
+3. Distinguish classes from instance objects with the "factory" metaphor.
 
+#### Advanced
+
+1. Get introduced to the idea of the class object.
 
 ## Battleship!
 
@@ -46,7 +49,7 @@ Maritime tradition often uses similar language when describing the design form (
 
 All four of the individual battleships may have slight differences in measurements, but each share a common set of attributes such as having a length of 887 feet (270 m), a beam of 108 feet (33 m), nine 16-inch primary guns, and twenty 5-inch secondary guns. While their individual displacement tonnage, crew complements, and specific armaments varied across their service careers, the specific values of these "properties" are not part of what defines each ship as an *Iowa*-class battleship, but rather, the *possession* of these attributes is what does.
 
-### Class Methods vs Instance Methods
+## Class Methods vs Instance Methods
 
 Do you recall from the previous readings the mention of a difference between the `-` or `+` prefix in a method declaration? You may recall the explanation of the `+alloc` and `-init` method pair, with `alloc` being a *class* method and `init` being an *instance* method that you should have used a few times by now.
 
@@ -57,19 +60,13 @@ NSMutableArray *mutableArray = [[NSMutableArray alloc]        init];
 
 Even though you've only written or edited *instance* methods at this point, you should have called a handful of *class* methods by now including the `alloc` method and perhaps the `arrayWithArray:` method on `NSMutableArray`. **Class methods** are precisely what their name implies: methods that are performed by the class. 
 
-## Classes are ~~People~~ Objects, Too
-
-So, how can a class perform a method if only objects are capable of performing methods? Well, because classes are objects too. More specifically, each class file generates a **class object** which serves as the "template" or "factory" for creating *instance objects* of that that class. 
-
-The class objects for Apple's frameworks (libraries) actually live in the iOS operating system and get initialized when the device starts up. Class objects for custom classes and imported frameworks (such as the Specta and Expecta libraries in the testing suite) get initialized when the application is launched. The result of this is that a class "template" object for every object that you might create an instance of in your application is prepared before the application itself gets to do anything.
-
 ### Manufacturing Instance Objects
 
 ![](https://curriculum-content.s3.amazonaws.com/ios/ios-intro-to-objects-unit/ios-intro-to-objects-unit/who_makes_all_these.gif)
 
-A class object, essentially, is the "factory" for creating instance objects based upon that class's template. The `NSString` class object is responsible for generating every *instance* of a static string object that your application requires, while the `NSMutableString` class object generates every *instance* of a mutable string object. Similarly, the `NSArray` class object generates static array instances, and the `NSDictionary` class object generates static dictionary instances. 
+A class, essentially, is the "factory" for creating instance objects based upon that class's template. The `NSString` class is responsible for generating every *instance* of a static string object that your application requires, while the `NSMutableString` class generates every *instance* of a mutable string object. Similarly, the `NSArray` class generates static array instances, and the `NSDictionary` class generates static dictionary instances. 
 
-While the class object is said to "manufacture" its instance objects, the common factory metaphor is not the best image in some ways. It's perhaps better to visualize the class object as the instrument in a manufacturing process that holds the form of the product, such as the die of an injection mold or the plate in a printing press.
+While the class is said to "manufacture" its instance objects, the common factory metaphor is not the best image in some ways. It's perhaps better to visualize the class as the instrument in a manufacturing process that holds the form of the product, such as the die of an injection mold or the plate in a printing press.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Yuan_dynasty_banknote_with_its_printing_plate_1287.jpg/1280px-Yuan_dynasty_banknote_with_its_printing_plate_1287.jpg)  
 —*A Yuan dynasty printing plate and banknote*, [Wikimedia Commons][yuan_banknote]
@@ -81,12 +78,21 @@ While the class object is said to "manufacture" its instance objects, the common
 
 [casting_tin_soldiers]: https://en.wikipedia.org/wiki/File:Castingtinsoldiers.jpg
 
-In this metaphor, it's easy to see the class object as distinct from the instances that it creates—but yet, there's an inseparable relationship between the two: the shape of the template and of the mold are based upon the needs of how the print or the product will be used, and any changes made to the template or to the mold will be reflected on the printed page or in the product's shape.
+In this metaphor, it's easy to see the class as distinct from the instances that it creates—but yet, there's an inseparable relationship between the two: the shape of the template and of the mold are based upon the needs of how the print or the product will be used, and any changes made to the template or to the mold will be reflected on the printed page or in the product's shape.
 
-It's also easy to imagine how classes aren't used to hold data, but rather to give structure to how the data should be held by an instance: it would be silly, for example, to try painting the inside of the mold while expecting your artwork to transfer to every one of the casted toys. No, each casted toy must be awarded its own coat of paint.
+It's also easy to imagine how classes aren't used to hold data, but rather to give structure to how the data should be held by an instance: it would be silly, for example, to try painting the inside of the mold while expecting the artwork to transfer to every one of the casted toys. No, each casted toy must be awarded its own coat of paint.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Toy_Soldiers_British_Coldstream_Guards.jpg/1024px-Toy_Soldiers_British_Coldstream_Guards.jpg)
 —*54mm Toy Soldiers representing the British Coldstream Guards during the Crimean War era* by Imperial Productions, Greytown, New Zealand. Photo by J. Corey Butler, 2005. [Wikipedia Commons](https://commons.wikimedia.org/wiki/File:Toy_Soldiers_British_Coldstream_Guards.jpg)
 
 In the same way, setting up a class file is like creating a template or a mold in code. It's not until an instance object of that class is created (or "manufactured") that we have the print or the product to apply to its intended purpose.
 
+## Advanced
+
+### Classes are ~~People~~ Objects, Too
+
+You may have wondered, "how can a class perform a method if only objects are capable of performing methods?" It's not a case of the chicken or the egg: it's because classes are objects too. More specifically, each custom class file generates exactly one **class object** as part of loading the application at run time. It's the class object which performs the `alloc` method when creating an *instance object* of that class. 
+
+**//Flat-fact:** *The class objects for Apple's frameworks (libraries) actually live within the iOS operating system and get initialized when the device starts up. Because they're a part of the operating system, they're available to any application that runs on the device.*
+
+These class objects for custom classes and imported frameworks (such as the Specta and Expecta libraries in the testing suite) get initialized when the application is launched. The result of this is that a class "template" object for every object that you might create an instance of in your application is prepared before the application itself gets to do anything.
