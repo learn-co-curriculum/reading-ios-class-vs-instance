@@ -21,7 +21,7 @@ If we were to write a program that simulates naval combat, we might start by cre
 
 What if we had to manually declare the value of *every* property for *every* warship that we wish to have in our simulation program? That's a lot of variable declarations! But every warship in our simulation will have data for each of these fields; it would save us a lot of work if we could find some way of creating a "warship" template, and then populate the data for the properties of each separate warship whenever we copy the template.
 
-![](https://upload.wikimedia.org/wikipedia/commons/0/0a/Battle_Group_Alpha_%28Midway%2C_Iowa%29_underway%2C_1987.jpg)  
+![](https://curriculum-content.s3.amazonaws.com/ios-intro-to-objects-unit/battle_group_alpha.jpg)  
 —*Battle Group Alpha (*Midway*,* Iowa*) underway, 1987*, [image by US Navy](https://en.wikipedia.org/wiki/File:Battle_Group_Alpha_(Midway,_Iowa)_underway,_1987.jpg)
 
 This is exactly what [Ole-Johan Dahl][ojd] and [Kristen Nygaard][kristen_nygaard] realized as they worked on developing the [Simula I and Simula 67 languages][simula] in the 1960s. Simula introduced the concept of **class** and **instance** (among other breakthroughs), and was a language that was instrumental in the development of [Smalltalk][smalltalk], the first fully-realized object-oriented programming language, at [Xerox PARC][parc] in the 1970s.
@@ -42,7 +42,7 @@ Maritime tradition often uses similar language when describing the design form (
 [uss_missouri]: https://en.wikipedia.org/wiki/USS_Missouri_(BB-63)
 [uss_wisconsin]: https://en.wikipedia.org/wiki/USS_Wisconsin_(BB-64)
 
-![](https://upload.wikimedia.org/wikipedia/commons/7/70/USS_Missouri_transfers.JPG)
+![](https://curriculum-content.s3.amazonaws.com/ios-intro-to-objects-unit/USS_Missouri_transfers.JPG)
 —*USS Missouri (BB-63) (at left) transferring personnel to USS Iowa (BB-61), while operating off Japan on 20 August 1945.*, [image by US Navy](https://en.wikipedia.org/wiki/File:USS_Missouri_transfers.JPG)
 
 **//Flat-fact:** *The* Iowa*-class was the largest and final battleship design of the US Navy, whose four ships saw intermittent service from 1943 until 1992, a span of nearly fifty years. Between them, participated in five US wars (including the Cold War) and the* Iowa*-class is the only WWII ship class whose entire membership still survives. Each of the four ships were donated by the US Navy to preservation society who maintain them in maritime museums across the United States.*
@@ -68,12 +68,12 @@ A class, essentially, is the "factory" for creating instance objects based upon 
 
 While the class is said to "manufacture" its instance objects, the common factory metaphor is not the best image in some ways. It's perhaps better to visualize the class as the instrument in a manufacturing process that holds the form of the product, such as the die of an injection mold or the plate in a printing press.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Yuan_dynasty_banknote_with_its_printing_plate_1287.jpg/1280px-Yuan_dynasty_banknote_with_its_printing_plate_1287.jpg)  
+![](https://curriculum-content.s3.amazonaws.com/ios-intro-to-objects-unit/yuan_dynasty_banknote.jpg)  
 —*A Yuan dynasty printing plate and banknote*, [Wikimedia Commons][yuan_banknote]
 
 [yuan_banknote]: https://commons.wikimedia.org/wiki/File:Yuan_dynasty_banknote_with_its_printing_plate_1287.jpg
 
-![](https://upload.wikimedia.org/wikipedia/commons/6/64/Castingtinsoldiers.jpg)  
+![](https://curriculum-content.s3.amazonaws.com/ios-intro-to-objects-unit/casting_tin_soldiers.jpg)  
 —*The permanent molding process.*, [Wikimedia Commons][casting_tin_soldiers]
 
 [casting_tin_soldiers]: https://en.wikipedia.org/wiki/File:Castingtinsoldiers.jpg
@@ -82,7 +82,7 @@ In this metaphor, it's easy to see the class as distinct from the instances that
 
 It's also easy to imagine how classes aren't used to hold data, but rather to give structure to how the data should be held by an instance: it would be silly, for example, to try painting the inside of the mold while expecting the artwork to transfer to every one of the casted toys. No, each casted toy must be awarded its own coat of paint.
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Toy_Soldiers_British_Coldstream_Guards.jpg/1024px-Toy_Soldiers_British_Coldstream_Guards.jpg)
+![](https://curriculum-content.s3.amazonaws.com/ios-intro-to-objects-unit/toy_soldiers.jpg)
 —*54mm Toy Soldiers representing the British Coldstream Guards during the Crimean War era* by Imperial Productions, Greytown, New Zealand. Photo by J. Corey Butler, 2005. [Wikipedia Commons](https://commons.wikimedia.org/wiki/File:Toy_Soldiers_British_Coldstream_Guards.jpg)
 
 In the same way, setting up a class file is like creating a template or a mold in code. It's not until an instance object of that class is created (or "manufactured") that we have the print or the product to apply to its intended purpose.
