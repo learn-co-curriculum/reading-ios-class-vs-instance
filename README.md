@@ -64,7 +64,7 @@ Even though you've only written or edited *instance* methods at this point, you 
 
 ![](https://curriculum-content.s3.amazonaws.com/ios/ios-intro-to-objects-unit/ios-intro-to-objects-unit/who_makes_all_these.gif)
 
-A class, essentially, is the "factory" for creating instance objects based upon that class's template. The `NSString` class is responsible for generating every *instance* of a static string object that your application requires, while the `NSMutableString` class generates every *instance* of a mutable string object. Similarly, the `NSArray` class generates static array instances, and the `NSDictionary` class generates static dictionary instances. 
+A class, essentially, is the "factory" for creating instance objects based upon that class's template. The `NSString` class is responsible for generating every *instance* of an immutable string object that your application requires, while the `NSMutableString` class generates every *instance* of a mutable string object. Similarly, the `NSArray` class generates immutable array instances, and the `NSDictionary` class generates immutable dictionary instances. 
 
 While the class is said to "manufacture" its instance objects, the common factory metaphor is not the best image in some ways. It's perhaps better to visualize the class as the instrument in a manufacturing process that holds the form of the product, such as the die of an injection mold or the plate in a printing press.
 
