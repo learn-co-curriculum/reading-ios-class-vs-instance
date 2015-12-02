@@ -96,3 +96,5 @@ You may have wondered, "how can a class perform a method if only objects are cap
 **//Flat-fact:** *The class objects for Apple's frameworks (libraries) actually live within the iOS operating system and get initialized when the device starts up. Because they're a part of the operating system, they're available to any application that runs on the device.*
 
 These class objects for custom classes and imported frameworks (such as the Specta and Expecta libraries in the testing suite) get initialized when the application is launched. The result of this is that a class "template" object for every object that you might create an instance of in your application is prepared before the application itself gets to do anything.
+
+<a href='https://learn.co/lessons/reading-ios-class-vs-instance' data-visibility='hidden'>View this lesson on Learn.co</a>
