@@ -97,4 +97,4 @@ You may have wondered, "how can a class perform a method if only objects are cap
 
 These class objects for custom classes and imported frameworks (such as the Specta and Expecta libraries in the testing suite) get initialized when the application is launched. The result of this is that a class "template" object for every object that you might create an instance of in your application is prepared before the application itself gets to do anything.
 
-<a href='https://learn.co/lessons/reading-ios-class-vs-instance' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-class-vs-instance' title='Class vs Instance'>Class vs Instance</a> on Learn.co and start learning to code for free.</p>
